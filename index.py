@@ -5,9 +5,6 @@ import cv2
 import os
 app = Flask(__name__,static_url_path='')
 app.config['UPLOAD_FOLDER'] = 'uploads'
-@app.route('/<path:path>')
-def send_js(path):
-    return send_from_directory('.', path)
 
 
 @app.route('/')
