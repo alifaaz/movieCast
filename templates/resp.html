@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "cb137d69-104a-4e4c-9fc4-4fd6b5dbcde5",
+    });
+  });
+</script>
+    <title>video resp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+</head>
+   <body>
+
+       <div class="ui container center">
+            <div class="ui segment text center">
+                    {{time}}
+                    {% for cast in casts%}
+                {{cast["name"]}}
+                <img src="{{cast['src']}}" alt="cast" style="width:100px; height:100px; margin:10px">
+                    {% endfor %}
+            </div>
+       </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+   <script>
+
+        function show(){
+            document.getElementById("msg").style.display="block";
+        }
+   </script>
+   </body>
+</html>
